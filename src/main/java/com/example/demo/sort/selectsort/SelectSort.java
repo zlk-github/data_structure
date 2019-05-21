@@ -1,6 +1,7 @@
 package com.example.demo.sort.selectsort;
 
 import com.example.demo.sort.bean.Student;
+import com.example.demo.sort.util.RandomArray;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +22,16 @@ public class SelectSort<T> {
      * （**当未排序序列中首位置不是最小时，将其与最小值的位置做交互，剩余未排序元素位置不变**）
      */
     public static void main(String[] args) {
-        Integer[] arr = new Integer[]{1,4,5,2,1,8,13,6,9};
+        Integer[] array = RandomArray.getArray(1, 1000, 5000);
+
+        Long startTime = System.currentTimeMillis();
         SelectSort<Integer[]> selectSort = new SelectSort();
-        Integer[] returnArr = selectSort.sortAll(arr);
+        Integer[] returnArr = selectSort.sortAll(array);
+        Long endTime = System.currentTimeMillis();
+        System.out.println("花费时间："+(float)(endTime-startTime)/1000+"秒");
 
         System.out.println("直接使用引用对象-----------------------");
-        for (Integer v:arr) {
+        for (Integer v:array) {
             System.out.println(v+",");
         }
         System.out.println("使用泛型的返回值-----------------------");
