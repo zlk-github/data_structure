@@ -17,13 +17,13 @@ public class BubbleSort {
      */
 
     public static void main(String[] args) {
-        Integer[] array = RandomArray.getArray(1, 100000, 100000);
+        Integer[] array = RandomArray.getArray(1, 100000, 1000000);
 
-        Integer[] arr1 = new Integer[150000];
-        Integer[] arr2 = new Integer[150000];
-        Integer[] arr3 = new Integer[150000];
+        Integer[] arr1 = new Integer[80000];
+        Integer[] arr2 = new Integer[80000];
+        Integer[] arr3 = new Integer[80000];
         Random rand = new Random();
-        for(int i = 0;i<150000;i++){
+        for(int i = 0;i<80000;i++){
             arr1[i] = rand.nextInt(10001);
             arr2[i] = rand.nextInt(10001);
             arr3[i] = rand.nextInt(10001);
