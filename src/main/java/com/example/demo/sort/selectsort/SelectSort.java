@@ -22,7 +22,7 @@ public class SelectSort<T> {
      * （**当未排序序列中首位置不是最小时，将其与最小值的位置做交互，剩余未排序元素位置不变**）
      */
     public static void main(String[] args) {
-        Integer[] array = RandomArray.getArray(1, 1000, 5000);
+        Integer[] array = RandomArray.getArray(1, 1000, 1);
 
         Long startTime = System.currentTimeMillis();
         SelectSort<Integer[]> selectSort = new SelectSort();
